@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>My Portfolio - Fulvio Famularo</title>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="https://use.fontawesome.com/05f878993c.js"></script>
+
+    <!-- CSS Styling -->
+
+    <style>
+        body {
+            font: 400 20px "Roboto", sans-serif;
+            lheight: 1.8;
+            color: #f5f6f7;
+        }
+        
+        .navbar {
+            margin: 10px;
+            background-color: #474e5d;
+            z-index: 9999;
+            border: 0;
+            font-size: 12px !important;
+            lheight: 1.42857143 !important;
+            letter-spacing: 4px;
+            border-radius: 0;
+            height: 100px;
+        }
+        
+        .navbar-fixed-top {
+            height: 110px;
+        }
+        
+        .navbar-nav {
+            padding: 15px 0;
+        }
+        
+        .navbar li a,
+        .navbar .navbar-brand {
+            color: #fff !important;
+        }
+        
+        .navbar-nav li a:hover,
+        .navbar-nav li.active a {
+            color: #474e5d !important;
+            background-color: #fff !important;
+        }
+        
+        .navbar-default .navbar-toggle {
+            border-color: transparent;
+            color: #fff !important;
+        }
+        
+        .navbar-brand {
+            padding: 5px;
+            margin-left: 2%;
+        }
+        
+        #myNavbar {
+            margin-right: 2%;
+        }
+        
+        p {
+            font-size: 20px;
+        }
+        
+        h1 {
+            font-style: bold;
+        }
+        
+        .divider1 {
+            height: 2px;
+            width: 90%;
+            border: solid 1px white;
+            background-color: white;
+        }
+        
+        .divider2 {
+            height: 2px;
+            width: 90%;
+            border: solid 1px black;
+            background-color: black;
+        }
+        
+        #about {
+            margin-top: 130px;
+        }
+        
+        #aboutp {
+            font-size: 70px;
+            font-weight: bold;
+        }
+        
+        .bg-1 {
+            background-color: lightgrey;
+            color: black;
+        }
+        
+        .bg-2 {
+            background-color: #474e5d;
+            color: #ffffff;
+        }
+        
+        .bg-3 {
+            background-color: #a7b8d3;
+            color: #555555;
+        }
+        
+        .bg-4 {
+            background-color: #aeb0b2;
+            color: #ffffff;
+        }
+        
+        .bg-6 {
+            background-color: #2f2f2f;
+            color: #ffffff;
+        }
+        
+        .bg-grey {
+            background-color: #f6f6f6;
+            color: black;
+        }
+        
+        .container-fluid {
+            padding: 60px 50px;
+            margin: 10px;
+        }
+        
+        .row img {
+            max-height: 450px;
+            min-height: 450px;
+            width: 100%;
+        }
+        
+        .fa {
+            padding: 20px;
+            font-size: 30px;
+            width: 30px;
+            text-align: center;
+            text-decoration: none;
+            margin: 5px 2px;
+            border-radius: 50%;
+        }
+        
+        .fa:hover {
+            opacity: 0.7;
+        }
+        
+        #atw {
+            font-size: 24px;
+            font-weight: bold;
+        }
+        
+        .social {
+            margin: 20px 10px;
+            text-align: left;
+        }
+        
+        .social i {
+            display: inline-block;
+            position: relative;
+            cursor: pointer;
+            width: 50px;
+            height: 50px;
+            border: 2px solid #ddd;
+            padding: 0px;
+            text-decoration: none;
+            text-align: center;
+            color: #FFF;
+            background-color: #909AA0;
+            font-size: 23px;
+            font-weight: normal;
+            line-height: 2em;
+            border-radius: 50%;
+            -moz-border-radius: 50%;
+            -webkit-border-radius: 50%;
+            -o-border-radius: 50%;
+            transition: all ease 0.3s;
+            -moz-transition: all ease 0.3s;
+            -webkit-transition: all ease 0.3s;
+            -o-transition: all ease 0.3s;
+            -ms-transition: all ease 0.3s;
+        }
+        
+        .social i:hover {
+            color: black;
+            text-decoration: none;
+            background-color: #fff;
+            transition: all ease 0.3s;
+            -moz-transition: all ease 0.3s;
+            -webkit-transition: all ease 0.3s;
+            -o-transition: all ease 0.3s;
+            -ms-transition: all ease 0.3s;
+        }
+        
+        .list-group-item {
+            background-color: #9eabbf;
+            color: white;
+            text-align: left;
+        }
+    </style>
+</head>
+
+<!-- Start of Body Content -->
+
+<body>
+
+    <body id="myPage" data-spy="scroll" data-target=".navbar" data-offset="60">
+
+        <nav class="navbar navbar-default navbar-fixed-top">
+
+            <a class="navbar-brand" href="#myPage">
+                <img src="thefarpoint100.png" alt="Logo">
+                <!--  style="float:left; height: 60px; margin-top: -20px" -->
+            </a>
+
+            <div class="collapse navbar-collapse" id="myNavbar">
+                <ul class="nav navbar-nav navbar-right">
+                    <li><a href="#about">ABOUT</a></li>
+                    <li><a href="#profile">PROFILE</a></li>
+                    <li><a href="#portfolio">PORTFOLIO</a></li>
+                    <li><a href="#history">HISTORY</a></li>
+                    <li><a href="#contact">CONTACT</a></li>
+                </ul>
+            </div>
+
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                          
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span> 
+                    </button>
+
+            </div>
+            <div class="container">
+
+
+            </div>
+        </nav>
+
+        <!-- Container (About Section) -->
+        <div id="about" class="container-fluid bg-1 text-center">
+            <p id="aboutp" class="text-center">THE FAR POINT</p>
+            <hr class="divider2">
+            <img src="https://source.unsplash.com/DXYyKCCvWiM/400x300" class="img-responsive center-block img-rounded" alt="Picture of the author">
+            <h1 class="text-center"><small>Management Consulting Services</small> </h1>
+
+        </div>
+
+        <!-- Container (Profile Section) -->
+        <div id="profile" class="container-fluid bg-2 text-center ">
+            <h2 class="text-center">PROFILE</h2>
+            <hr class="divider1">
+            <p>Results driven, high-energy executive with more than 20 years of international experience in the payment and semiconductor industries. </p>
+            <p>Diverse range of payment technology expertise, including EMV standard, mobile ecosystem solutions and smart card applets specifications.</p>
+            <p>Extensive experience in Strategic Account Management &amp; Partnerships, with strong accent on Business Development, Value Based selling.</p>
+            <p>Wide knowledge of key semiconductor segments (smart cards, microcontrollers, computer peripherals, telecommunications, optical networking and automotive).</p>
+            <p>Product Line Director with successful track record of revenue growth and management of geographically dispersed teams.</p>
+        </div>
+
+        <!-- Container (Portfolio Section) -->
+        <div id="portfolio" class="container-fluid bg-4 text-center ">
+            <h2>PORTFOLIO</h2>
+            <hr class="divider1">
+
+            <div class="row">
+                <div class="col-sm-6">
+                    <p>Account Reporting Example</p>
+                    <img src="Strategic_Account_Planning1b.jpg" class="img-responsive" alt="Image">     </div>
+                <div class="col-sm-6">
+                    <p>Business Plan Summary</p>
+                    <img src="Business_Plan_Framework1b.jpg" class="img-responsive" alt="Image">     </div>
+            </div>
+
+            <div class="row">
+                <div class="col-sm-6">
+                    <p>Opportunity Summary</p>
+                    <img src="Business_Plan_Framework2b.jpg" class="img-responsive" alt="Image">     </div>
+                <div class="col-sm-6">
+                    <p>Product Description</p>
+                    <img src="Business_Plan_Framework3b.jpg" class="img-responsive" alt="Image">     </div>
+            </div>
+
+            <div class="row">
+                <div class="col-sm-6">
+                    <p>Financial Details</p>
+                    <img src="Business_Plan_Framework4b.jpg" class="img-responsive" alt="Image">     </div>
+                <div class="col-sm-6">
+                    <p>Top Performance Indicators</p>
+                    <img src="Business_Plan_Framework5b.jpg" class="img-responsive" alt="Image">     </div>
+            </div>
+        </div>
+
+        <!-- Container (History Section) -->
+        <div id="history" class="container-fluid bg-3 text-center ">
+            <h2 class="text-center ">A Brief History</h2>
+            <hr class="divider2">
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+            </p><br>
+            <div class="col-sm-6">
+                <ul class="list-group">
+                    <li class="list-group-item">2007 - 2015, Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod.</li>
+                    <li class="list-group-item">2000 - 2007, Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod. </li>
+                    <li class="list-group-item">1996 - 2000, Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod.</li>
+                    <li class="list-group-item">1993 - 1996, Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod.</li>
+                </ul>
+            </div>
+            <div class="col-sm-6">
+                <ul class="list-group">
+                    <li class="list-group-item">2007 - 2015, Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod.</li>
+                    <li class="list-group-item">2000 - 2007, Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod. </li>
+                    <li class="list-group-item">1996 - 2000, Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod.</li>
+                    <li class="list-group-item">1993 - 1996, Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod.</li>
+                </ul>
+            </div>
+
+        </div>
+
+        <!-- Container (Contact Section) -->
+        <div id="contact" class="container-fluid bg-grey">
+            <h2 class="text-center">CONTACT</h2>
+            <hr class="divider2">
+            <div class="row">
+                <div class="col-sm-5">
+                    <p>Looking forward to talking to you.</p>
+                    <p><span class="glyphicon glyphicon-map-marker"></span> Munich, Germany</p>
+                    <p><span class="glyphicon glyphicon-phone"></span> +49 1515151515</p>
+                    <p><span class="glyphicon glyphicon-envelope"></span> fulvio.famularo@outlook.com</p><br>
+                    <p id="atw">AROUND THE WEB</p>
+                    <div class="social">
+                        <a href="https://linkedin.com/in/fulvio-famularo-05b8416 " target="_blank"><i class="fa fa-lg fa-linkedin"></i></a>
+                        <a href="https://www.xing.com/profile/Fulvio_Famularo?sc_o=mxb_p" target="_blank"><i class="fa fa-lg fa-xing"></i></a>
+                        <a href="https://github.com/Calprimus" target="_blank"><i class="fa fa-lg fa-github"></i></a>
+                        <a href="https://www.reddit.com/user/Calprimus/" target="_blank"><i class="fa fa-lg fa-reddit"></i></a>
+                        <a href="https://www.facebook.com/profile.php?id=100008844670660" target="_blank"><i class="fa fa-lg fa-facebook"></i></a>
+                    </div>
+                </div>
+                <div class="col-sm-7">
+                    <div class="row">
+                        <div class="col-sm-6 form-group">
+                            <input class="form-control" id="name" name="name" placeholder="Name" type="text" required>
+                        </div>
+                        <div class="col-sm-6 form-group">
+                            <input class="form-control" id="email" name="email" placeholder="Email" type="email" required>
+                        </div>
+                    </div>
+                    <textarea class="form-control" id="comments" name="comments" placeholder="Comment" type="comment" rows="5"> </textarea><br>
+                    <div class="row">
+                        <div class="col-sm-3 form-group pull-right">
+                            <button class="btn btn-default btn-block pull-right" type="submit"><span class="glyphicon glyphicon-envelope"></span> Send</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+
+    <footer class="container-fluid bg-6 text-center ">
+        <p>May 2017, Coded By <a href="mailto:fulvio.famularo@hotmail.com " target="_blank ">Fulvio Famularo</a></p>
+    </footer>
+
+</html>
